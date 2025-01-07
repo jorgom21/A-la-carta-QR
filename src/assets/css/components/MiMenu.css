@@ -1,0 +1,117 @@
+.mi-menu__container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.mi-menu__container__input {
+	font-size: 2em;
+	border: none;
+	text-align: center;
+	outline: none;
+	padding-bottom: 1em;
+	border-bottom: 1px solid #383838;
+	width: 70%;
+}
+
+.mi-menu__container__input:focus {
+	border-bottom: 1px solid #383838;
+}
+
+.mi-menu__container__label {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.mi-menu__no-foods {
+	margin-top: 10em;
+	font-size: 1.2em;
+}
+
+.food-container {
+	width: 100%;
+	box-shadow: 0px 16px 40px rgba(0, 0, 0, 0.05);
+	border-radius: 10px;
+	margin-bottom: 3em;
+	padding: 2em;
+}
+
+.menu-link-qr {
+	font-weight: 500;
+	text-align: center;
+	font-size: 1.1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 2em;
+}
+
+.menu-link-qr__link {
+	color: #44ea7c;
+}
+
+.menu-link-qr__qr {
+	display: flex;
+	height: 3em;
+	margin-top: 1em;
+	width: 50%;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	border-radius: 5px;
+	background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+
+.menu-link-qr__qr--icon {
+	height: 50%;
+	margin-left: 1em;
+}
+
+.food-container__buttons {
+	width: 100%;
+	margin-top: 1em;
+	display: flex;
+	justify-content: center;
+}
+
+.food-container-button {
+	height: 3em;
+	min-width: 8em;
+	margin: 0 1em;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	color: #fff;
+	font-weight: 500;
+}
+
+.food-container__button-edit {
+	background: #00c6ff;
+	background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+	background: linear-gradient(to right, #0072ff, #00c6ff);
+}
+.food-container__button-delete {
+	background: #ff416c;
+	background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
+	background: linear-gradient(to right, #ff4b2b, #ff416c);
+}
+
+.fadeIn {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
