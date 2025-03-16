@@ -7,7 +7,7 @@ const Home =() => {
     const {currentUser} = useContext(AuthContext)
 
     useEffect(() => {
-		document.title = 'Delimenú - Home'
+		document.title = 'A la carta QR - home'
 	}, [])
 
    if(currentUser) {

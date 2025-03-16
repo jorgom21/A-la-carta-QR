@@ -41,6 +41,23 @@ const UserPanel =() => {
 						/>
 					</div>
 				</Link>
+				<Link className="user-panel__main__link" to="/miperfil">
+					<div className="main-menu-card card-1">
+						<h2>TU PERFIL</h2>
+						<div className="main-menu-card__arrow-container">
+							<img
+								className="main-menu-card__arrow-container--img"
+								src="/img/icons/arrow-card-2.svg"
+								alt="→"
+							/>
+						</div>
+						<img
+							className="main-menu-card--img-1"
+							src="/img/illustrations/card-3.png"
+							alt="Food"
+						/>
+					</div>
+				</Link>
 			</section>
 		</UserPanelLayout> 
     </div>

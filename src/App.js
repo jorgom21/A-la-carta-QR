@@ -6,6 +6,7 @@ import LoginRegisterContainer from "./pages/LoginRegisterContainer";
 import { AuthProvider } from "./components/Auth";
 import MiMenu from "./pages/MiMenu";
 import Menu from "./pages/Menu";
+import MiPerfil from "./pages/MiPerfil";
 import MisPedidos from "./pages/MisPedidos";
 import './assets/css/index.css'
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/register" element={<LoginRegisterContainer/>}/>
           <Route path="/mi-menu" element={<MiMenu/>}/>
           <Route path="/mis-pedidos" element={<MisPedidos/>}/>
+          <Route path="/miperfil" element={<MiPerfil/>}/>
           <Route path="*" element={<NotFound/>} />
           <Route path="/menu/:id" element={<Menu/>}/>
         </Routes>

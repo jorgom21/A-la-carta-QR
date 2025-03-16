@@ -24,7 +24,7 @@ const Menu = ({ match }) => {
 	const [searchResult, setSearchResult] = useState([])
 
 	useEffect(() => {
-		document.title = 'Delimenú - Menú'
+		document.title = 'A la carta QR - Menú'
 		getMenuState()
 	}, [])
 
@@ -221,7 +221,7 @@ const Menu = ({ match }) => {
 						<Link className="header__logo__link" to="/">
 							<img
 								className="header__logo"
-								src="/img/logos/delimenu-black.svg"
+								src="https://pbkwrzzwwvbqshypeqmp.supabase.co/storage/v1/object/public/logos//jor.png"
 								alt="Logo"
 							/>
 						</Link>
@@ -248,6 +248,10 @@ const Menu = ({ match }) => {
 					<div className="main-container__title">
 						<h1 className="main-container__title__h1">Menú</h1>
 					</div>
+					<div className='banner-container'>
+						<img className='banner' src={'https://pbkwrzzwwvbqshypeqmp.supabase.co/storage/v1/object/public/banners//2X1.png'} alt="banner" />
+					</div>
+					
 					{food.length === 0 ? (
 						<div className="no-food">
 							<p>Este menú aun no tiene comida.</p>
@@ -301,7 +305,7 @@ const Menu = ({ match }) => {
 		<div className="fullscreen-loader">
 			<img
 				className="fullscreen-loader__img"
-				src="/img/logos/delimenu-green.svg"
+				src="logo empresa"
 				alt="Logo"
 			/>
 		</div>

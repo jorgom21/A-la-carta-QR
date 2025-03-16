@@ -10,7 +10,7 @@ const LandingPage = () => {
 				<Link className="header-landing__logo" to="/">
 					<img
 						className="header-landing__logo--img"
-						src="\img\logos\delimenu.svg"
+						src="\img\logos\logoalacarta.png"
 						alt="logo"
 					/>
 				</Link>
@@ -44,9 +44,9 @@ const LandingPage = () => {
 				<div className="landing-container__button-hero">
 					<Link
 						className="landing__button__main landing__button__main-demo"
-						to="/menu/py5Uygez0IfRaAEOM9x4IVLxssM2"
+						to="/menu/386735cc-e90e-4932-9fb3-9799ec448104"
 					>
-						<span>Demo</span>
+						<span>Demostracion</span>
 						<img
 							className="landing__button--img"
 							src="/img/icons/arrow-right-black.svg"

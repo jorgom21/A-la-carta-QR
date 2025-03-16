@@ -15,7 +15,7 @@ const LoginRegisterContainer = () => {
 				<Link to="/">
 					<img
 						className="login-register__form__logo"
-						src="/img/logos/delimenu.svg"
+						src="/img/logos/logoalacarta.png"
 						alt="Logo"
 					/>
 				</Link>
@@ -56,7 +56,7 @@ const LoginRegisterContainer = () => {
 						<br />
 						<br />
 						<span className="login-register__form__links--link">
-							© 2024 A la carta QR, Inc.
+							© 2025 A la carta QR, Inc.
 						</span>
 					</div>
 				</div>

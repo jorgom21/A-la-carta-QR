@@ -12,7 +12,7 @@ const Login = () => {
 	const navigate = useNavigate()  
 
 	useEffect(() => {
-		document.title = 'Delimenú - Inicio de sesión'
+		document.title = 'A la carta QR - Inicio de sesion'
 	}, [])
 
 	const handleInput = (event) => {

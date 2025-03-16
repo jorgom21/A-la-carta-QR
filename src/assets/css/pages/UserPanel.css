@@ -11,7 +11,7 @@
 .user-panel__header {
 	width: 100%;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 25% 50% 25%;
 	grid-template-rows: 3em;
 	grid-row-gap: 1em;
 	grid-template-areas: 'logo menu profile';
@@ -43,7 +43,7 @@
 }
 
 .user-panel__header__logo--img {
-	height: 100%;
+	height: 200%;
 }
 
 .user-panel__profile {

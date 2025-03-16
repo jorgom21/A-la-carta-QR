@@ -29,7 +29,7 @@ const MiMenu = () => {
 	})
 
 	useEffect(() => {
-		document.title = 'Delimenú - Mi menú'
+		document.title = 'A la carta QR - Mi menú'
 		getfoods()
 	}, [])
 
@@ -153,6 +153,7 @@ const MiMenu = () => {
 		})
 
 		setNewFood(InitialStateInputValues)
+		getfoods()
 	}
 
     if (currentUser) {
