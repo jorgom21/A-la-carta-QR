@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {useEffect, useState } from 'react'
 import MenuItem from '../components/MenuItem'
 import { supabase } from '../supabase/cliente'
 import { Link, useParams } from 'react-router-dom'
@@ -25,28 +25,54 @@ const Menu = ({ match }) => {
 
 	useEffect(() => {
 		document.title = 'A la carta QR - Menú'
-		getMenuState()
-	}, [])
 
-	const getFood = async () => {
-		const foods = []
-		try {
-			const {data}= await supabase
-				.from('foods')
-				.select()
-				.eq('idUser', id.id)
-
-			data.forEach((doc) => {
-				foods.push({ ...doc })
-			})
-			setFood(foods)
-			setActive(true)
-		} catch (error) {
-			Notify.failure(
-				'Algo salió mal al traer los datos del menu. Por favor intentalo de nuevo'
-			)
+		const getFood = async () => {
+			const foods = []
+			try {
+				const {data}= await supabase
+					.from('foods')
+					.select()
+					.eq('idUser', id.id)
+	
+				data.forEach((doc) => {
+					foods.push({ ...doc })
+				})
+				setFood(foods)
+				setActive(true)
+			} catch (error) {
+				Notify.failure(
+					'Algo salió mal al traer los datos del menu. Por favor intentalo de nuevo'
+				)
+			}
 		}
-	}
+
+		const getMenuState = async () => {
+			const menus = []
+			
+			try {
+				const {data} = await supabase
+					.from('menus')
+					.select()
+					.eq('idUser', id.id)
+					
+	
+				data.forEach((doc) => {
+					menus.push({ ...doc })
+				})
+			} catch (error) {
+				Notify.failure('Algo salió mal.')
+			}
+			if (menus.length) {
+				getFood()
+			} else {
+				setNoMenu(true)
+			}
+		}
+
+		getMenuState()
+	}, [id.id])
+
+	
 
 	const addToCart = (food) => {
 		setCarritoNumber(carritoNumber + 1)
@@ -120,27 +146,7 @@ const Menu = ({ match }) => {
 		return total
 	}
 
-	const getMenuState = async () => {
-		const menus = []
-		try {
-			const {data} = await supabase
-				.from('menus')
-				.select()
-				.eq('idUser', id.id)
-				
-
-			data.forEach((doc) => {
-				menus.push({ ...doc })
-			})
-		} catch (error) {
-			Notify.failure('Algo salió mal.')
-		}
-		if (menus.length) {
-			getFood()
-		} else {
-			setNoMenu(true)
-		}
-	}
+	
 
 	if (noMenu) {
 		return <NotFound />
@@ -221,7 +227,7 @@ const Menu = ({ match }) => {
 						<Link className="header__logo__link" to="/">
 							<img
 								className="header__logo"
-								src="https://pbkwrzzwwvbqshypeqmp.supabase.co/storage/v1/object/public/logos//jor.png"
+								src="https://zuvvtlfkayusfpkuwmvz.supabase.co/storage/v1/object/public/logos/jor.png"
 								alt="Logo"
 							/>
 						</Link>
@@ -249,7 +255,7 @@ const Menu = ({ match }) => {
 						<h1 className="main-container__title__h1">Menú</h1>
 					</div>
 					<div className='banner-container'>
-						<img className='banner' src={'https://pbkwrzzwwvbqshypeqmp.supabase.co/storage/v1/object/public/banners//2X1.png'} alt="banner" />
+						<img className='banner' src={'https://zuvvtlfkayusfpkuwmvz.supabase.co/storage/v1/object/public/banners/2X1.webp'} alt="banner" />
 					</div>
 					
 					{food.length === 0 ? (
