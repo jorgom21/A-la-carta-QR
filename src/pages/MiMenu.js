@@ -30,6 +30,21 @@ const MiMenu = () => {
 
 	useEffect(() => {
 		document.title = 'A la carta QR - Mi menú'
+		// Suscripción a cambios en la tabla "foods"
+    const channel = supabase
+      .channel('custom-all-channel')
+      .on(
+        'postgres_changes',
+        { event: '*', schema: 'public', table: 'foods' },
+        (payload) => {
+          console.log('Cambio detectado:', payload)
+        }
+      )
+      .subscribe()
+
+    return () => {
+      supabase.removeChannel(channel) // limpiar al desmontar
+    }
 		getfoods()
 	}, [])
 
